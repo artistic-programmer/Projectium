@@ -1,3 +1,4 @@
+
 # 🎬 Projectium
 
 > A full-stack movie discovery application built with **Jetpack Compose** and **Golang**, powered by the **TMDB API**.
@@ -59,6 +60,12 @@ Projectium/
 ├── README.md
 └── ROADMAP.md
 ```
+
+---
+
+## 🏗️ System Architecture
+
+![System Architecture](docs/architecture/system-architecture.png)
 
 ---
 
