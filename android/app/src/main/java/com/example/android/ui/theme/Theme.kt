@@ -12,25 +12,43 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    // Main Background Container Color
+    background = premiumBlack,
+
+    // Cards
+    primaryContainer = glassBlack,
+    primary = classicWhite,
+    secondary = lightGray80,
+
+    // Cards/Add-to-Watchlist
+    tertiaryContainer = darkRed,
+    onTertiaryContainer = classicWhite,
+    tertiary = classicWhite,
+    onTertiary = classicBlack,
+
+    // Nav Items
+    primaryFixed = classicWhite70,
+    onPrimaryFixed = darkRed,
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
+    // Main Background Container Color
+    background = premiumWhite,
 
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
+    // Cards
+    primaryContainer = glassWhite,
+    primary = classicBlack,
+    secondary = lightGray20,
+
+    // Cards / Add-to-Watchlist
+    tertiaryContainer = darkRed,
+    onTertiaryContainer = classicWhite,
+    tertiary = darkRed,
+    onTertiary = classicWhite,
+
+    // Nav Items
+    primaryFixed = classicBlack70,
+    onPrimaryFixed = darkRed,
 )
 
 @Composable
