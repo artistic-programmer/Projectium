@@ -79,4 +79,8 @@ dependencies {
     // Room DB
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
+
+    // Legacy Extended Icons dependency
+    implementation(libs.androidx.material3)
+    implementation(libs.androidx.compose.material.icons.extended)
 }
