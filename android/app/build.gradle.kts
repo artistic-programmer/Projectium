@@ -40,6 +40,7 @@ dependencies {
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.compose.material.icons.extended)
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
@@ -69,6 +70,7 @@ dependencies {
 
     // Coil - Image Loading
     implementation(libs.coil.compose)
+    implementation("io.coil-kt.coil3:coil-network-okhttp:3.0.0")
 
     // Hilt - Dependency Injection
     implementation(libs.androidx.hilt.lifecycle.viewmodel.compose)
@@ -79,8 +81,4 @@ dependencies {
     // Room DB
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
-
-    // Legacy Extended Icons dependency
-    implementation(libs.androidx.material3)
-    implementation(libs.androidx.compose.material.icons.extended)
 }
