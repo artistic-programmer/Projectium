@@ -33,7 +33,7 @@ fun RatingChip(
         modifier = modifier
             .height(22.dp)
             .clip(MaterialTheme.shapes.small)
-            .background(classicBlack70)
+            .background(MaterialTheme.colorScheme.secondaryContainer)
             .border(
                 width = 0.5.dp,
                 color = ratingYellow,

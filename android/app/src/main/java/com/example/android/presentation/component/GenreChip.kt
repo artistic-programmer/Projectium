@@ -17,13 +17,13 @@ import com.example.android.ui.theme.classicBlack70
 import com.example.android.ui.theme.ratingYellow
 
 @Composable
-fun Chip(
+fun GenreChip(
     title: String,
     modifier: Modifier = Modifier
 ) {
     Box(
         modifier = modifier
-            .height(22.dp)
+            .height(18.dp)
             .clip(MaterialTheme.shapes.small)
             .background(MaterialTheme.colorScheme.secondaryContainer)
             .border(
@@ -32,7 +32,7 @@ fun Chip(
                 shape = MaterialTheme.shapes.small
             )
             .padding(
-                horizontal = 7.dp
+                horizontal = 3.dp
             ),
         contentAlignment = Alignment.Center
     ) {

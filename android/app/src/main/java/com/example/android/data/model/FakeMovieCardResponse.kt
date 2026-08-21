@@ -11,7 +11,7 @@ val FakeMovieResponse = MovieModel(
     popularity = 1842.35,
     posterPath = "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=500&h=750&auto=format&fit=crop",
     releaseDate = "2026-05-15",
-    title = "Chronicles of Aetheria",
+    title = "Chronicles of Aetheria Hellllllooo World",
     video = false,
     rating = 8.4,
     voteCount = 3420,

@@ -1,11 +1,14 @@
 package com.example.android.presentation.component
 
 import android.util.Log
+import android.widget.Space
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -17,6 +20,11 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.BookmarkBorder
+import androidx.compose.material.icons.rounded.Add
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonColors
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.ButtonElevation
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -25,6 +33,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -43,8 +52,8 @@ fun MovieCard(
 
     Row(
         modifier = Modifier
-            .fillMaxWidth()
-            .height(200.dp)
+            .fillMaxWidth(0.96f)
+            .height(232.dp)
             .clip(cardShape)
             .background(MaterialTheme.colorScheme.primaryContainer)
             . clickable { onClick() }
@@ -60,7 +69,7 @@ fun MovieCard(
             contentDescription = movie.title,
             contentScale = ContentScale.Crop,
             modifier = Modifier
-                .width(110.dp)
+                .width(130.dp)
                 .fillMaxHeight()
                 .clip(MaterialTheme.shapes.small)
         )
@@ -97,16 +106,16 @@ fun MovieCard(
                         color = MaterialTheme.colorScheme.onPrimaryContainer
                     )
 
-                    IconButton(
-                        onClick = onWatchlistClick,
-                        modifier = Modifier.size(32.dp)
-                    ) {
-                        Icon(
-                            imageVector = Icons.Default.BookmarkBorder,
-                            contentDescription = "Add to watchlist",
-                            tint = MaterialTheme.colorScheme.onPrimaryContainer
-                        )
-                    }
+//                    IconButton(
+//                        onClick = onWatchlistClick,
+//                        modifier = Modifier.size(32.dp)
+//                    ) {
+//                        Icon(
+//                            imageVector = Icons.Default.BookmarkBorder,
+//                            contentDescription = "Add to watchlist",
+//                            tint = MaterialTheme.colorScheme.onPrimaryContainer
+//                        )
+//                    }
                 }
 
                 Spacer(
@@ -153,6 +162,51 @@ fun MovieCard(
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.secondary
                 )
+
+                Spacer(
+                    modifier = Modifier.height(Spaces.sm)
+                )
+
+                // Add To Watchlist Button
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.Center,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Button(
+                        onClick = onWatchlistClick,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(34.dp),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = MaterialTheme.colorScheme.tertiaryContainer,
+                            contentColor = MaterialTheme.colorScheme.tertiary
+                        ),
+                        shape = MaterialTheme.shapes.small,
+                        contentPadding = PaddingValues(horizontal = 8.dp),
+                        elevation = ButtonDefaults.buttonElevation(
+                            defaultElevation = Spaces.xs,
+                            pressedElevation = 0.dp
+                        )
+                    ) {
+                        Icon(
+                            imageVector = Icons.Rounded.Add,
+                            contentDescription = null,
+                            modifier = Modifier.size(16.dp)
+                        )
+
+                        Spacer(
+                            modifier = Modifier.width(Spaces.xs)
+                        )
+
+                        Text(
+                            text = "Add to Watchlist",
+                            style = MaterialTheme.typography.labelSmall,
+                            maxLines = 1,
+                            softWrap = false
+                        )
+                    }
+                }
             }
         }
     }

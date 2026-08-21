@@ -26,9 +26,16 @@ private val DarkColorScheme = darkColorScheme(
     tertiary = classicWhite,
     onTertiary = classicBlack,
 
+    // Chip
+    secondaryContainer = classicBlack70,
+    onSecondary = classicWhite,
+
     // Nav Items
     primaryFixed = classicWhite70,
     onPrimaryFixed = darkRed,
+
+    // Skeleton Colors
+    surfaceContainer = skeletonDark
 )
 
 private val LightColorScheme = lightColorScheme(
@@ -43,12 +50,20 @@ private val LightColorScheme = lightColorScheme(
     // Cards / Add-to-Watchlist
     tertiaryContainer = darkRed,
     onTertiaryContainer = classicWhite,
-    tertiary = darkRed,
-    onTertiary = classicWhite,
+    tertiary = classicWhite,
+    onTertiary = classicBlack,
+
+    // Chip
+    secondaryContainer = classicWhite70,
+    onSecondary = classicBlack70,
 
     // Nav Items
     primaryFixed = classicBlack70,
     onPrimaryFixed = darkRed,
+
+    // Skeleton Colors
+    surfaceContainer = skeletonLight
+
 )
 
 @Composable
