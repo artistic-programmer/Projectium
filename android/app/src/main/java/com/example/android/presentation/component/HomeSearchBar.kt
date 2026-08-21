@@ -1,5 +1,7 @@
 package com.example.android.presentation.component
 
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.text.input.TextFieldState
 import androidx.compose.material.icons.Icons
@@ -18,6 +20,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -32,7 +36,7 @@ fun HomeSearchBar(
 
     SearchBar(
         modifier = modifier
-            .fillMaxWidth(),
+            .fillMaxWidth(0.96f),
 
         inputField = {
             SearchBarDefaults.InputField(
@@ -92,7 +96,8 @@ fun HomeSearchBar(
 
         onExpandedChange = {
             expanded = it
-        }
+        },
+        windowInsets = WindowInsets(0, 0, 0, 0)
     ) {
         // Search suggestions/results will be added later.
     }

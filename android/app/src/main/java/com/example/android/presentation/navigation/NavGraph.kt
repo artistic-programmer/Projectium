@@ -17,7 +17,8 @@ fun NavGraph(
     NavHost(
         navController = navController,
         startDestination = HOME_ROUTE,
-        route = ROOT_ROUTE
+        route = ROOT_ROUTE,
+        modifier = modifier
     ){
         HomeNavGraph(navController)
         composable(NavRoute.Watchlist.route){
